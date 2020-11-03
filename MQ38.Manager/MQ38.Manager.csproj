@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MQ38.Engine\MQ38.Engine.csproj" />
+    <ProjectReference Include="..\MQ38.Shared\MQ38.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

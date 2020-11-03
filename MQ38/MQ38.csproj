@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MQ38.Manager\MQ38.Manager.csproj" />
+    <ProjectReference Include="..\MQ38.Shared\MQ38.Shared.csproj" />
+  </ItemGroup>
+
+
+</Project>
