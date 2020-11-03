@@ -1,15 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using MQ38.Accessor;
+using MQ38.Engine;
+using MQ38.Manager;
 
 namespace MQ38
 {
@@ -26,6 +22,10 @@ namespace MQ38
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddTransient<IEventManager, EventManager>();
+            services.AddTransient<IEventEngine, EventEngine>();
+            services.AddTransient<IEventAccessor, EventAccessor>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
